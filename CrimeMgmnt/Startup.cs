@@ -1,6 +1,8 @@
+using CrimeMgmnt.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,6 +25,15 @@ namespace CrimeMgmnt
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            // NOTE: This should be the FIRST service registered in the ConfigureServices() method.
+            // Register Entity Framework Core Servies to use SQL Server
+            // Register the ApplicationDbContext as a Service that can be used using Dependency Injection (DI)
+            services.AddDbContext<ApplicationDbContext>((options) =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("MyDefaultConnectionString"));
+            });
+
             services.AddRazorPages();
         }
 
