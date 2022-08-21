@@ -6,12 +6,13 @@
 
 <h1>Create</h1>
 
-<h4>User</h4>
+<h4>New Report</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
             <div class="form-group">
                 <label asp-for="UserName" class="control-label"></label>
                 <input asp-for="UserName" class="form-control" />
@@ -50,7 +51,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a href="https://localhost:44315/">Back To Home</a>
 </div>
 
 @section Scripts {

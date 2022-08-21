@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
@@ -29,8 +30,7 @@ namespace CrimeMgmnt.Models
 
 
         [Required]
-        [StringLength(100, ErrorMessage = "{0} cannot be empty")]
-        [MinLength(10, ErrorMessage = "{0} cannot have lesser than {10} characters")]
+        [StringLength(100)]
         public string Status { get; set; }
 
 

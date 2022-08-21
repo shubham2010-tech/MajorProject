@@ -27,6 +27,7 @@ namespace CrimeMgmnt.Areas.Authority.Controllers
         }
 
         // GET: Authority/Users/Details/5
+        
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -61,9 +62,9 @@ namespace CrimeMgmnt.Areas.Authority.Controllers
             {
                 _context.Add(user);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                //return RedirectToAction(nameof(Index));
             }
-            return View(user);
+            return View("Details", user);
         }
 
         // GET: Authority/Users/Edit/5
@@ -149,6 +150,15 @@ namespace CrimeMgmnt.Areas.Authority.Controllers
         private bool UserExists(int id)
         {
             return _context.users.Any(e => e.UserId == id);
+        }
+
+        public void Reply()
+        {
+            CyberCellsController cyberCellsController = new CyberCellsController(_context);
+
+            cyberCellsController.GetReply();
+
+            //return View("");
         }
     }
 }

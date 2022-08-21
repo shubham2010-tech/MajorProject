@@ -25,16 +25,24 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Manage</a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">User</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item"
-                                   asp-area="Authority" asp-controller="users" asp-action="Index">Users</a>
+                                   asp-area="Authority" asp-controller="users" asp-action="Create">Report</a>
+                                <a class="dropdown-item" href="https://localhost:44315/Authority/CyberCells">Report Status</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Authority</a>
+                            <div class="dropdown-menu">
                                 <a class="dropdown-item"
                                    asp-area="Authority" asp-controller="CyberCells" asp-action="Index">CyberCell</a>
+                                <a class="dropdown-item" href="https://localhost:44315/Authority/users">All Records</a>
                             </div>
                         </li>
                     </ul>
                 </div>
+                <partial name="_LoginPartial" />
             </div>
         </nav>
     </header>
@@ -47,6 +55,7 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2022 - CrimeMgmnt - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <a href="/Swagger">API Documentation</a>
         </div>
     </footer>
 

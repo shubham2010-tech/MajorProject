@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using CrimeMgmnt.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace CrimeMgmnt.Data
 {
-    public class ApplicationDbContext:DbContext
+    public class ApplicationDbContext: IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions options)
             : base(options)

@@ -49,7 +49,7 @@ namespace CrimeMgmnt.Areas.Authority.Controllers
         // GET: Authority/CyberCells/Create
         public IActionResult Create()
         {
-            ViewData["UserId"] = new SelectList(_context.users, "UserId", "CrimeDescription");
+            ViewData["UserId"] = new SelectList(_context.users, "UserId", "UserId");
             return View();
         }
 
@@ -62,11 +62,14 @@ namespace CrimeMgmnt.Areas.Authority.Controllers
         {
             if (ModelState.IsValid)
             {
+               // bool isDuplicateFound
+                   // =_context.cyberCells.Any(c => CyberCell.UserId == Cybercell.userId);
+
                 _context.Add(cyberCell);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.users, "UserId", "CrimeDescription", cyberCell.UserId);
+            ViewData["UserId"] = new SelectList(_context.users, "UserId", "UserId", cyberCell.UserId);
             return View(cyberCell);
         }
 
@@ -83,7 +86,7 @@ namespace CrimeMgmnt.Areas.Authority.Controllers
             {
                 return NotFound();
             }
-            ViewData["UserId"] = new SelectList(_context.users, "UserId", "CrimeDescription", cyberCell.UserId);
+            ViewData["UserId"] = new SelectList(_context.users, "UserId", "UserId", cyberCell.UserId);
             return View(cyberCell);
         }
 
@@ -119,7 +122,7 @@ namespace CrimeMgmnt.Areas.Authority.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.users, "UserId", "CrimeDescription", cyberCell.UserId);
+            ViewData["UserId"] = new SelectList(_context.users, "UserId", "UserId", cyberCell.UserId);
             return View(cyberCell);
         }
 
@@ -156,6 +159,11 @@ namespace CrimeMgmnt.Areas.Authority.Controllers
         private bool CyberCellExists(int id)
         {
             return _context.cyberCells.Any(e => e.ControlRoomId == id);
+        }
+
+        public IActionResult GetReply()
+        {
+            return View("Create");
         }
     }
 }
