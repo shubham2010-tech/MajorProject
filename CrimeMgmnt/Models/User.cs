@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 
 namespace CrimeMgmnt.Models
 {
-    [Table(name: "User")]
+    [Table(name: "Users")]
     public class User
     {
         [Key]

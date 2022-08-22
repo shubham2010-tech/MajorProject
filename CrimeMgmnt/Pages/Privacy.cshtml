@@ -1,8 +1,406 @@
 ﻿@page
 @model PrivacyModel
-@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* POPPINS FONT FAMILY */
+              
 
-<p>Use this page to detail your site's privacy policy.</p>
+* {
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background-color: #f5f5f5;
+}
+
+.companies{
+  margin-top: 20px;
+  margin-left: 60px;
+}
+.company-items{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  margin-left: 30px;
+}
+.api-heading{
+  font-weight: 800;
+  margin-left: 90px;
+  margin-right: 100px;
+  font-style: bold;
+}
+.cards{
+  margin-left: 90px;
+  margin-top: 20px;
+  display: flex;
+}
+.card{
+  width: 20%;
+  height: 250px;
+  background-image: transparent;
+  margin-top: 30px;
+}
+.card-active{
+  width: 20%;
+  height: 250px;
+  background-color: #ffffff;
+  margin-right: 30px;
+  box-shadow: 0px 1px 2px #000000;
+  padding: 10px;
+  border-radius: 10px;
+}
+.card-logo{
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.card-head-active{
+  color: #5a31fc;
+  margin-left: 28px;
+}
+.card-head{
+  color: #000000;
+  margin-left: 28px;
+}
+.card-body{
+  color: #000000;
+  font-size: small;
+  margin-left: 28px;
+}
+.mango{
+  height: 25px;
+  margin-top: 100px;
+  margin-left: 50px;
+  padding: 8px 14px;
+  background-color: #5a31fc;
+  border-radius:27px;
+}
+.blog-heading{
+  margin-left: 90px;
+}
+.blog-cards{
+  display: flex;
+  margin-left: 90px;
+}
+.blog-card{
+  height: 300px;
+  width: 48%;
+}
+.blog-content{
+  margin-left: 60%;
+  margin-top: -55%;
+}
+.blog-content h6{
+  position: relative;
+  color: #5a31fc;
+}
+.blog-content small{
+  font-size: small;
+  font-weight: 200;
+}
+.blog-bottom{
+  margin-left: 60%;
+  margin-top: 3%;
+}
+.blog-author{
+  margin-left: 47%;
+  margin-top: -9%;
+}
+.faq-section{
+  display: flex;
+  background-color: rgb(209, 207, 207);
+  height: 324px;
+  margin-top: 4%;
+}
+.faq-content{
+  margin-left: 90px;
+  margin-top: 2%;
+}
+.Makesmall{
+  font-size: 10px;
+}
+.faq-content button{
+  border: none;
+  background-color: #5a31fc;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+.faq-image{
+  position: absolute;
+  /* float: right; */
+  margin-left: 54.5%;
+}
+.download-section{
+  display: flex;
+  margin-top: 4%;
+  margin-left: 7%;
+  gap: 46%;
+}
+.download-section h1 span{
+  font-weight: normal;
+}
+.download-email{
+  margin-top: 3.5%;
+}
+.download-email form button{
+  position: relative;
+  z-index: 1200;
+  border: none;
+  background-color: #4a31fc;
+  padding: 7px 22px;
+  border-radius: 20px;
+  margin-left: 180%;
+  /* margin-top: -10%; */
+}
+.download-email form input{
+  position: absolute;
+  z-index: 100;
+  border: none;
+  background-color: rgb(228, 227, 227); 
+  margin-left: -14%;
+  padding-left: 20px;
+  padding-right: 230px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+}
+.footer-section{
+  height: 200px;
+  margin-top: 5%;
+  background-color: #4a31fc;
+  display: flex;
+}
+.footer-left{
+  float: left;
+  margin-top: 90px;
+  margin-left: 73px;
+}
+.list{
+  display: flex;
+  list-style-type: none;
+  margin-left: -45px;
+  color: #fff;
+  gap: 20px;
+}
+.list-items{
+  font-size: 10px;
+}
+.footer-right{
+  margin-left: 55%;
+  margin-top: 90px;
+}
+.footers-right{
+  gap: 10px;
+}
+.logos-list{
+  display: flex;
+  list-style-type: none;
+  margin-left: -25%;
+  gap: 25px;
+  color: #ffffff;
+}
+    </style>
+</head>
+<body style="background-color: lightpink;">
+
+    <nav class="navbar navbar-expand navbar-dark bg-success sticky-top">
+        <a class="navbar-brand" href="#">
+            <img src="~/Images/Cmain3.png" alt="Logo" style="width:50px;">
+        </a>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./">E-Cyber Cell</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <!-- NAVBAR LINKS -->
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">User</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item"
+                           asp-area="Authority" asp-controller="users" asp-action="Create">Report</a>
+                        <a class="dropdown-item" href="https://localhost:44315/Authority/CyberCells">Report Status</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Authority</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item"
+                           asp-area="Authority" asp-controller="CyberCells" asp-action="Index">CyberCell</a>
+                        <a class="dropdown-item" href="https://localhost:44315/Authority/users">All Records</a>
+                    </div>
+                </li>
+            </ul>
+            <partial name="_LoginPartial" />
+        </div>
+    </nav>
+
+
+    <!-- Companies -->
+    <div class="companies" style=" margin-top: 20px;
+    margin-left: 60px;">
+        <a href="#" class="company-items">Cyber cell</a>
+        <a href="#" class="company-items">Cyber cell</a>
+        <a href="#" class="company-items">Cyber cell</a>
+    </div>
+
+    <!-- API Section -->
+    <div class="api">
+        <h1 class="api-heading">APIs <br> by category</h1>
+        <!-- Cards -->
+        <div class="cards">
+            <!-- Card 01 -->
+            <div class="card-active">
+                <img class="card-logo" src="./images/Group 97.png">
+                <h3 class="card-head-active">Identity & <br> Security</h3>
+                <p class="card-body">Lorem ipsum dolor sit amt, <br> consectetur adipiscing.</p>
+            </div>
+            <!-- Card 02 -->
+            <div class="card">
+                <img class="card-logo" src="./images/Group 98.png">
+                <h3 class="card-head">Data & <br> Analytics</h3>
+                <p class="card-body">Lorem ipsum dolor sit amt, <br> consectetur adipiscing.</p>
+            </div>
+            <!-- Card 03 -->
+            <div class="card">
+                <img class="card-logo" src="./images/Group 99.png">
+                <h3 class="card-head">Commercial</h3>
+                <p class="card-body">Lorem ipsum dolor sit amt, <br> consectetur adipiscing.</p>
+            </div>
+            <!-- Card 04 -->
+            <div class="card">
+                <img class="card-logo" src="./images/Group 100.png">
+                <h3 class="card-head">Offers & <br> Benefits</h3>
+                <p class="card-body">Lorem ipsum dolor sit amt, <br> consectetur adipiscing.</p>
+            </div>
+            <!-- Card 05 -->
+            <div class="card">
+                <img class="card-logo" src="./images/Group 101.png">
+                <h3 class="card-head">Payment <br> Methods</h3>
+                <p class="card-body">Lorem ipsum dolor sit amt, <br> consectetur adipiscing.</p>
+
+            </div>
+            <div class="card">
+                <svg class="card-logo mango" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><<path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z" /></svg>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Blog section -->
+
+    <div class="blog-heading">
+        <h1>Latest <br> blog article</h1>
+    </div>
+    <!-- Blogs -->
+    <div class="blog-cards">
+        <!-- Blog card 01 -->
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="./images/Rectangle.png" alt="">
+            </div>
+            <div class="blog-content">
+                <h6>06 Aug 2019</h6>
+                <h3>Custom-made <br> loyalty programme</h3>
+                <small>Lorem ipsum dolor sit amet <br>consectetur adipisicing elit. <br> consectetur adipisicing elit. <br>Lorem ipsum dolor sit amet</small>
+            </div>
+            <div class="blog-bottom">
+                <img class="blog-card-bottom-image" src="./images/IMAGE HERE (2).png" alt="">
+            </div>
+            <div class="blog-author">
+                <b class="blog-author">Bobby Wagner</b>
+            </div>
+
+        </div>
+
+        <!-- Blog card 02 -->
+
+        <div class="blog-card">
+            <div class="blog-image">
+                <img src="./images/Rectangle Copy.png" alt="">
+            </div>
+            <div class="blog-content">
+                <h6>08 Aug 2019</h6>
+                <h3>You can <br> travel with ease</h3>
+                <small>Lorem ipsum dolor sit amet <br>consectetur adipisicing elit. <br> consectetur adipisicing elit. <br>Lorem ipsum dolor sit amet</small>
+            </div>
+            <div class="blog-bottom">
+                <img class="blog-card-bottom-image" src="./images/IMAGE HERE (2).png" alt="">
+            </div>
+            <div class="blog-author">
+                <b class="blog-author">Gloria Graham</b>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FAQ SECTION -->
+    <div class="faq-section">
+        <div class="faq-content">
+            <h2>Have <br> a question</h2>
+            <h4 class="Makesmall">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique mollitia <br>nam animi exercitationem et eum enim nulla veritatis,</h4>
+            <h4>Do you have any question about anythings ?</h4>
+
+            <button>Contact Us</button>
+        </div>
+        <div class="faq-image">
+            <img src="./images/Rectangle_38-2 (1).png" alt="">
+        </div>
+    </div>
+
+    <!-- Download -->
+    <div class="download-section">
+        <div class="download-content">
+            <h1>Download <span> Now</span></h1>
+        </div>
+        <div class="download-email">
+            <form>
+                <input placeholder="Enter your email address" />
+                <button>Download</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Download -->
+    <div class="footer-section">
+        <div class="footer-left">
+            <img class="footer-logo" src="./images/Logo.png" alt="">
+            <ul class="list">
+                <li class="list-items"></li>
+                <li class="list-items">Home</li>
+                <li class="list-items">APIs</li>
+                <li class="list-items">Blogs</li>
+                <li class="list-items">Forums</li>
+            </ul>
+        </div>
+
+        <div class="footer-right">
+            <div class="footers-right">
+                <img class="footer-logos" src="./images/Group 102.png" alt="">
+                <img class="footer-logos" src="./images/Group 103.png" alt="">
+                <img class="footer-logos" src="./images/Group 104.png" alt="">
+            </div>
+            <ul class="logos-list">
+                <li class="list-items">FAQ</li>
+                <li class="list-items">Business</li>
+                <li class="list-items">Help</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
+

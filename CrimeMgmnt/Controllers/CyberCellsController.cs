@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CrimeMgmnt.Data;
 using CrimeMgmnt.Models;
+using Microsoft.Extensions.Logging;
+using CrimeMgmnt.Areas.Authority.Controllers;
 
 namespace CrimeMgmnt.Controllers
 {
@@ -15,17 +17,43 @@ namespace CrimeMgmnt.Controllers
     public class CyberCellsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly ILogger<CyberCellsController> _logger;
 
-        public CyberCellsController(ApplicationDbContext context)
+        public CyberCellsController(ApplicationDbContext context, ILogger<CyberCellsController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         // GET: api/CyberCells
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CyberCell>>> GetcyberCells()
+
+        //since the expectation to controller is to return the package inside the Ok result method
+
+        //public async Task<ActionResult<IEnumerable<CyberCell>>> GetcyberCells()
+        public async Task<IActionResult> GetControlRoom()
         {
-            return await _context.cyberCells.ToListAsync();
+            //here we are packaging and telling to return the Ok result
+            // return await _context.cyberCells.ToListAsync();
+
+            try
+            {
+                var ControllRoom = await _context.cyberCells.ToListAsync();
+
+                if(ControllRoom == null)
+                {
+                    _logger.LogWarning("No Id found in the database");
+                    return NotFound();
+                }
+                _logger.LogInformation("Extracted all the ControllRoom Id From Database");
+                return Ok(ControllRoom);
+            }
+            catch
+            {
+                _logger.LogError("Its an attempt to Retrieve information from the database");
+                return BadRequest();
+            }
+            //return Ok(await _context.cyberCells.ToListAsync());
         }
 
         // GET: api/CyberCells/5

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CrimeMgmnt.Data;
 using CrimeMgmnt.Models;
+using Microsoft.Extensions.Logging;
 
 namespace CrimeMgmnt.Controllers
 {
@@ -15,8 +16,10 @@ namespace CrimeMgmnt.Controllers
     public class UsersController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        //enable to add dependency injection to user controller
+       // private readonly ILogger<UsersController> 
 
-        public UsersController(ApplicationDbContext context)
+        public UsersController(ApplicationDbContext context)       //, ILogger<UsersController> logger)
         {
             _context = context;
         }
