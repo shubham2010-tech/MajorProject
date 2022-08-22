@@ -7,10 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CrimeMgmnt.Data;
 using CrimeMgmnt.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CrimeMgmnt.Areas.Authority.Controllers
 {
     [Area("Authority")]
+    [Authorize]
     public class CyberCellsController : Controller
     {
         private readonly ApplicationDbContext _context;
