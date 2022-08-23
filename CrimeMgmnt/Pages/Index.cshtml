@@ -1,12 +1,15 @@
 ﻿@page
 @model IndexModel
 @{
+    Layout = "";
     ViewData["Title"] = "Home page";
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./css/site.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    
     <style>
         .card {
             transition: all 0.2s ease;
@@ -21,7 +24,7 @@
             }
     </style>
 </head>
-<body style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2BC6rrk6dehLe1lk1R3SS0aCVcOl7CDhvXA&usqp=CAU')">
+<body style="margin-bottom: 0px; background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2BC6rrk6dehLe1lk1R3SS0aCVcOl7CDhvXA&usqp=CAU')">
     <nav class="navbar navbar-expand navbar-dark bg-success sticky-top">
         <a class="navbar-brand" href="#">
             <img src="~/Images/Cmain3.png" alt="Logo" style="width:50px;">
@@ -103,7 +106,7 @@
          style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/003.webp');">
         <h1 class="mb-3 h2">Types Of Cyber Attacks</h1>
 
-        <h4>Your Data Is Your Asset</h4>
+        <h4><--Your Data Is Your Asset--></h4>
 
         <p>
             There are different types of cyber attacks which can your data into trouble, and that is something
@@ -117,87 +120,152 @@
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="card shadow" style="width:20rem; max-height:22rem; margin-bottom:20px">
-                    <img class="card-img-top" style="width:20rem; max-height:10rem;" src="~/Images/smishing.jpg" alt="Chilli Potato" />
+                    <img class="card-img-top" style="width:20rem; max-height:10rem;" src="~/Images/smishing.jpg" alt="Smishing" />
                     <div class="card-body text-center">
-                        <h5 class="card-title">Chilli Potato</h5>
+                        <h5 class="card-title">Smishing</h5>
                         <p class="card-text">
-                            This is the best chilli potato of India, Eat
-                            and you will be fond of it.
+                            Smishing attacks use texts to trick targets into sending private
+                            information.
                         </p>
-                        <a href="" class="btn btn-success">Order</a>
+                        <a href="https://dl.acm.org/doi/10.1145/3231053.3231116" class="btn btn-success">Deatils</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card shadow" style="width:20rem; max-height:22rem; margin-bottom:20px">
-                    <img class="card-img-top" style="width:20rem; max-height:10rem;" src="~/Images/SQL-Injection-Attack.jpg" alt="Burger" />
+                    <img class="card-img-top" style="width:20rem; max-height:10rem;" src="~/Images/SQL-Injection-Attack.jpg" alt="Sql Injection Attack" />
                     <div class="card-body text-center">
-                        <h5 class="card-title">Burger</h5>
+                        <h5 class="card-title">Sql Injection</h5>
                         <p class="card-text">
-                            This is the best Burger of India, Eat
-                            and you will be fond of it.
+                            A successful SQL injection attack can result in unauthorized access to 
+                            sensitive data.
                         </p>
-                        <a href="" class="btn btn-success">Order</a>
+                        <a href="https://dl.acm.org/doi/10.1145/3231053.3231116" class="btn btn-success">Details</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card shadow" style="width:20rem; max-height:22rem; margin-bottom:20px">
-                    <img class="card-img-top" style="width:20rem; max-height:10rem;" src="~/Images/shamin-haky-RIk-i9rXPao-unsplash.jpg" alt="Pav Bhaji" />
+                    <img class="card-img-top" style="width:20rem; max-height:10rem;" src="~/Images/shamin-haky-RIk-i9rXPao-unsplash.jpg" alt="Malware" />
                     <div class="card-body text-center">
-                        <h5 class="card-title">Pav Bhaji</h5>
+                        <h5 class="card-title">Malware</h5>
                         <p class="card-text">
-                            This is the best Pav Bhaji of India, Eat
-                            and you will be fond of it.
+                            common cyberattack where malware 
+                            executes actions on the victim's system.
                         </p>
-                        <a href="" class="btn btn-success">Order</a>
+                        <a href="https://dl.acm.org/doi/10.1145/3231053.3231116" class="btn btn-success">Details</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card shadow" style="width:20rem; max-height:22rem; margin-bottom:10px">
-                    <img class="card-img-top" style="width:20rem; max-height:10rem;" src="~/Images/Cphising1.jpg" alt="Bhel Puri" />
+                    <img class="card-img-top" style="width:20rem; max-height:10rem;" src="~/Images/Cphising1.jpg" alt="Phishing" />
                     <div class="card-body text-center">
-                        <h5 class="card-title">Bhel Puri</h5>
+                        <h5 class="card-title">Phishing</h5>
                         <p class="card-text">
-                            This is the best Bhel Puri of India, Eat
-                            and you will be fond of it.
+                             Phishing attacks are the practice of sending fraudulent communications
+                             that appear to come from a reputable source.
                         </p>
-                        <a href="" class="btn btn-success">Order</a>
+                        <a href="https://dl.acm.org/doi/10.1145/3231053.3231116" class="btn btn-success">Details</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card shadow" style="width:20rem; max-height:22rem; margin-bottom:10px">
-                    <img class="card-img-top" style="width:20rem; max-height:10rem;" src="~/Images/Cphising3.jpg" alt="Diff Rolls" />
+                    <img class="card-img-top" style="width:20rem; max-height:10rem;" src="~/Images/Cphising3.jpg" alt="Mail Attacks" />
                     <div class="card-body text-center">
-                        <h5 class="card-title">Rolls</h5>
+                        <h5 class="card-title">Mail Attacks</h5>
                         <p class="card-text">
-                            This is the best Rolls of India, Eat
-                            and you will be fond of it.
+                            It occurs when an attacker, masquerading as a trusted entity, 
+                            dupes a victim into opening an email, instant message.
                         </p>
-                        <a href="" class="btn btn-success">Order</a>
+                        <a href="https://dl.acm.org/doi/10.1145/3231053.3231116" class="btn btn-success">Details</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card shadow" style="width:20rem; max-height:22rem; margin-bottom:10px;">
-                    <img class="card-img-top" style="width:20rem; max-height:10rem;" src="~/Images/Ccard3.jpg" alt="French Fries" />
+                    <img class="card-img-top" style="width:20rem; max-height:10rem;" src="~/Images/Ccard3.jpg" alt="Password Attack" />
                     <div class="card-body text-center">
-                        <h5 class="card-title">French Fries</h5>
+                        <h5 class="card-title">Password Attack</h5>
                         <p class="card-text">
-                            This is the best French Fries of India, Eat
-                            and you will be fond of it.
+                            assword attacks involve exploiting a broken authorization vulnerability 
+                            in the system combined with automatic password
                         </p>
-                        <a href="" class="btn btn-success">Order</a>
+                        <a href="https://dl.acm.org/doi/10.1145/3231053.3231116" class="btn btn-success">Details</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <br/>
+    <div class="container">
+        <div class="media border p-3" style="background-color:darkslategrey">
+            <img src="~/Images/person1.jpg" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+            <div class="media-body">
+                <h4 style="color:white;">Dr. Shiv Baliyan<small><i style="color:white;">  Cyber Cell Head  </i></small></h4>
+                <p style="color:white;">Head of the Cyber cell system at district level</p>
+                <div class="media p-3">
+                    <img src="~/Images/person1.jpg" alt="Jane Doe" class="mr-3 mt-3 rounded-circle" style="width:45px;">
+                    <div class="media-body">
+                        <h4 style="color:white;">Er. Nitesh Parmar<small><i style="color:white;">  Sub-Incharge Of Cyber Cell  </i></small></h4>
+                        <p style="color:white;">Handles the Controll Room Of cyber cell at district level</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Adding Table-->
+    <div class="container">
+        <h2 style="color:#ffffff;"> Contact Us</h2>
+        <h5 style="color:#ffffff;">--You can contact the controll room 24*7 If your city is having our cyber branch--</h5>
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pune</td>
+                    <td>1234555</td>
+                    <td>Punecyber@example.com</td>
+                    <td>12/Z, Meera nagar</td>
+                </tr>
+                <tr>
+                    <td>Mumbai</td>
+                    <td>1234444</td>
+                    <td>Mumbaicyber@example.com</td>
+                    <td>15/A, Cyber World</td>
+                </tr>
+                <tr>
+                    <td>Delhi</td>
+                    <td>1237777</td>
+                    <td>Delhicyber@example.com</td>
+                    <td>17/C, Jam nagar</td>
+                </tr>
+                <tr>
+                    <td>Noida</td>
+                    <td>1239999</td>
+                    <td>Noidacyber@example.com</td>
+                    <td>15/C, DLF city</td>
+                </tr>
+                <tr>
+                    <td>Gujrat</td>
+                    <td>1236666</td>
+                    <td>Gujratcyber@example.com</td>
+                    <td>87/C, Preet Vihar</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <!--Added the footer area-->
 
-    <div class="container my-5">
+    <div class="container" style="padding-bottom: 0px; margin-bottom: 0px;">
 
         <footer class="bg-dark text-center text-lg-start text-white">
             <!-- Grid container -->
@@ -206,57 +274,57 @@
                 <div class="row mt-4">
                     <!--Grid column-->
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">See other books</h5>
+                        <h5 class="text-uppercase">Cyber Attack?</h5>
 
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>Bestsellers</a>
+                                <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>Data Theft</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>All books</a>
+                                <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>Account Hacking</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white"><i class="fas fa-user-edit fa-fw fa-sm me-2"></i>Our authors</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--Grid column-->
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Execution of the contract</h5>
-
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Supply</a>
-                            </li>
-                            <li>
-                                <a href="#!" class="text-white"><i class="fas fa-backspace fa-fw fa-sm me-2"></i>Returns</a>
-                            </li>
-                            <li>
-                                <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>Regulations</a>
-                            </li>
-                            <li>
-                                <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>Privacy policy</a>
+                                <a href="#!" class="text-white"><i class="fas fa-user-edit fa-fw fa-sm me-2"></i>Breaching Info</a>
                             </li>
                         </ul>
                     </div>
                     <!--Grid column-->
                     <!--Grid column-->
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Publishing house</h5>
+                        <h5 class="text-uppercase">To Do</h5>
 
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#!" class="text-white">The BookStore</a>
+                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Immediate Report</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white">123 Street</a>
+                                <a href="#!" class="text-white"><i class="fas fa-backspace fa-fw fa-sm me-2"></i>Deactivate account</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white">05765 NY</a>
+                                <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>Change password</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white"><i class="fas fa-briefcase fa-fw fa-sm me-2"></i>Send us a book</a>
+                                <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>Be careful</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Head Branch</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>265346</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>123/A Divya Nagar</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>05765 NY</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-briefcase fa-fw fa-sm me-2"></i>Noida</a>
                             </li>
                         </ul>
                     </div>
@@ -267,13 +335,13 @@
 
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#!" class="text-white"><i class="fas fa-at fa-fw fa-sm me-2"></i>Help in purchasing</a>
+                                <a href="#!" class="text-white"><i class="fas fa-at fa-fw fa-sm me-2"></i>Twitter</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Check the order status</a>
+                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Blog Account</a>
                             </li>
                             <li>
-                                <a href="#!" class="text-white"><i class="fas fa-envelope fa-fw fa-sm me-2"></i>Join the newsletter</a>
+                                <a href="#!" class="text-white"><i class="fas fa-envelope fa-fw fa-sm me-2"></i>Facebook</a>
                             </li>
                         </ul>
                     </div>
@@ -284,13 +352,17 @@
             <!-- Grid container -->
             <!-- Api Documentation -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-                © 2021 Copyright:
-                <a class="text-white" href="/Swagger">Api Documentation</a>
+                © For API Documentation:
+                <a class="text-white" href="/Swagger">Click Here</a>
             </div>
             <!--  Api Documentation  -->
         </footer>
 
     </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 
 </body>
 </html>

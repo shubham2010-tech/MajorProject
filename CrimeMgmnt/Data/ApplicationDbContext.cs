@@ -14,8 +14,6 @@ namespace CrimeMgmnt.Data
         public DbSet<User> users { get; set; }
 
         public DbSet<CyberCell> cyberCells { get; set; }
-
-        public DbSet<CrimeMgmnt.Models.CrimeFeeds> CrimeFeeds { get; set; }
         
     }
 }

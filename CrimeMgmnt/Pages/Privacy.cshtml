@@ -1,5 +1,7 @@
 ﻿@page
 @model PrivacyModel
+@{
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer Landing Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body style="background-color: lightpink;">
+<body>
 
     <nav class="navbar navbar-expand navbar-dark bg-success sticky-top">
         <a class="navbar-brand" href="#">
@@ -46,6 +49,122 @@
             <partial name="_LoginPartial" />
         </div>
     </nav>
+    <!--Header section-->
+    <!-- Jumbotron -->
+    <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+         style="background-image: url('https://primelegal.in/wp-content/uploads/2020/11/cyber-crime-1-638.jpg'); background-size:auto">
+        <br/>
+        <p>
+         -
+         -
+         -
+         -
+         -
+        </p>
+        <br/>
+    </div>
+    <!-- Jumbotron -->
+    <!--Adding Footer-->
+    <!-- Footer -->
+    <div class="container" style="padding-bottom: 0px; margin-bottom: 0px;">
+
+        <footer class="bg-dark text-center text-lg-start text-white">
+            <!-- Grid container -->
+            <div class="container p-4">
+                <!--Grid row-->
+                <div class="row mt-4">
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Cyber Attack?</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>Data Theft</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>Account Hacking</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-user-edit fa-fw fa-sm me-2"></i>Breaching Info</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">To Do</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Immediate Report</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-backspace fa-fw fa-sm me-2"></i>Deactivate account</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>Change password</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>Be careful</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Head Branch</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>265346</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>123/A Divya Nagar</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>05765 NY</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-briefcase fa-fw fa-sm me-2"></i>Noida</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Write to us</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-at fa-fw fa-sm me-2"></i>Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Blog Account</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-envelope fa-fw fa-sm me-2"></i>Facebook</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+        </footer>
+    </div>
+    <!-- Grid container -->
+    <!-- Api Documentation -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © For API Documentation:
+        <a class="text-white" href="/Swagger">Click Here</a>
+    </div>
+    <!--  Api Documentation  -->
+    <!-- Footer -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
 </body>
 </html>
 
