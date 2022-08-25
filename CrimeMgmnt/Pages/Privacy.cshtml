@@ -1,6 +1,7 @@
 ﻿@page
 @model PrivacyModel
 @{
+    Layout = "";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -11,8 +12,53 @@
     <title>Developer Landing Page</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        .about-item {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            background-color: pink padding: 80px, 30px;
+            box-shadow: 0 0 9px rgba(0, 0, 0 .6);
+        }
+            .about-item h3 {
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+
+            .about-item hr {
+                width: 46px;
+                height: 3px;
+                background-color: hotpink;
+                margin: 0 auto;
+                border: none;
+            }
+
+            .about-item p {
+                margin-top: 20px;
+            }
+
+            .about-item:hover {
+                background-color: darkslategrey;
+            }
+
+                .about-item:hover i,
+                .about-item:hover h3,
+                .about-item:hover p {
+                    color: #fff
+                }
+
+                .about-item:hover hr {
+                    background-color: #fff;
+                }
+
+                .about-item:hover i,
+                .about-item:hover h3,
+                .about-item:hover p {
+                    transition: all 400ms ease-in-out;
+                }
+    </style>
+
 </head>
-<body>
+<body style="background-image:url('https://mobimg.b-cdn.net/v3/fetch/19/1944cb9f72235ba73d424ce1efa67a4d.jpeg')">
 
     <nav class="navbar navbar-expand navbar-dark bg-success sticky-top">
         <a class="navbar-brand" href="#">
@@ -45,27 +91,91 @@
                         <a class="dropdown-item" href="https://localhost:44315/Authority/users">All Records</a>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" asp-area="" asp-page="SafetyTips">Safety Tips</a>
+                </li>
             </ul>
             <partial name="_LoginPartial" />
         </div>
     </nav>
     <!--Header section-->
-    <!-- Jumbotron -->
-    <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
-         style="background-image: url('https://primelegal.in/wp-content/uploads/2020/11/cyber-crime-1-638.jpg'); background-size:auto">
-        <br/>
-        <p>
-         -
-         -
-         -
-         -
-         -
-        </p>
-        <br/>
+    <!-- Head img -->
+    <div id="carouselExampleControls"
+         class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/Images/Aboutimg.jpg"
+                     class="d-block w-100" alt="cyber" style="max-height:400px;">
+            </div>
+        </div>
     </div>
-    <!-- Jumbotron -->
-    <!--Adding Footer-->
-    <!-- Footer -->
+    <br />
+    <!-- Head Image -->
+    <!--JUmbotron-->
+    <div class="container">
+        <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+             style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/003.webp');">
+            <h1 class="mb-3 h2">About Us</h1>
+
+            <h4><--E Cyber Cell--></h4>
+
+            <p>
+                The online portal where a victim can file a cyber crime complaint is https://cyber crime.gov.in/Accept.
+                aspx, an initiative of Government of India that caters to complaints pertaining to the online
+                sexually explicit content such as Rape content
+                and other cyber crimes such as social media crimes, online financial frauds, ransomware, hacking, cryptocurrency
+                crimes, and online cyber trafficking.
+            </p>
+        </div>
+    </div>
+    <!--JUmbotron-->
+    <div class="container">
+        <div class="alert alert-primary">
+            <strong>Hello Visiter!</strong> We are always there for our our public with our Mission,Vision and Feat
+        </div>
+        <!-- box-info -->
+                <div class="content-box" style="color:black; bgcolor: yellow;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="about-item text-center">
+                                    <h3>Miision</h3>
+                                    <hr>
+                                    <p>
+                                        The main mission of National Cyber Safety and Security Standards is to protect
+                                        our national critical infrastructure from cyber related threats.
+                                        Every other day, we hear news of cyber criminals hacking into banks, online sites, companies etc.
+                                        It is very obvious that something has to be done to secure our IT infrastructure.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="about-item text-center">
+                                    <h3>Vision</h3>
+                                    <hr>
+                                    <p>
+                                        We reduce the vulnerability of the digital environment implementing combined cyber-security and
+                                        cyber-defense systems that neutralize advanced threats, thereby contributing to the improvement of
+                                        security for all.It is very obvious that something has to be done to secure our IT infrastructure.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="about-item text-center">
+                                    <h3>Feat</h3>
+                                    <hr>
+                                    <p>
+                                        Incorporated several data thiefs in recent task of hack-hackers. Cyber cell has reached to maximum of the
+                                        hackers by catching their guid from tracking and other details. As the hackers also changes their current location
+                                        with corrupt and local networks but we are still in success to catch them.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <!-- Box-Info -->
+     <!--Added the footer area-->
+
     <div class="container" style="padding-bottom: 0px; margin-bottom: 0px;">
 
         <footer class="bg-dark text-center text-lg-start text-white">
@@ -150,21 +260,20 @@
                 </div>
                 <!--Grid row-->
             </div>
-        </footer>
-    </div>
-    <!-- Grid container -->
-    <!-- Api Documentation -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © For API Documentation:
-        <a class="text-white" href="/Swagger">Click Here</a>
-    </div>
-    <!--  Api Documentation  -->
-    <!-- Footer -->
-
+            <!-- Grid container -->
+            <!-- Api Documentation -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © For API Documentation:
+                <a class="text-white" href="/Swagger">Click Here</a>
+            </div>
+            <!--  Api Documentation  -->
+            </footer>
+        </div>
+<!--
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
+    -->
 </body>
 </html>
 

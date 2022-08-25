@@ -1,0 +1,247 @@
+﻿@page
+@model CrimeMgmnt.Pages.SafetyTipsModel
+@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <style>
+        ul, #myUL {
+            list-style-type: disc;
+        }
+
+        #myUL {
+            margin: 0;
+            padding: 0;
+        }
+
+        #space {
+            margin-bottom: 40px;
+        }
+
+        .caret {
+            cursor: pointer;
+            -webkit-user-select: none; /* Safari 3.1+ */
+            -moz-user-select: none; /* Firefox 2+ */
+            -ms-user-select: none; /* IE 10+ */
+            user-select: none;
+        }
+
+            .caret::before {
+                content: "\25B6";
+                color: black;
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+        .caret-down::before {
+            -ms-transform: rotate(90deg); /* IE 9 */
+            -webkit-transform: rotate(90deg); /* Safari */
+            ' transform: rotate(90deg);
+        }
+
+        .nested {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+
+</head>
+<body style="margin-bottom: 0px; background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2BC6rrk6dehLe1lk1R3SS0aCVcOl7CDhvXA&usqp=CAU')">
+    <nav class="navbar navbar-expand navbar-dark bg-success sticky-top">
+        <a class="navbar-brand" href="#">
+            <img src="~/Images/Cmain3.png" alt="Logo" style="width:50px;">
+        </a>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./">E-Cyber Cell</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <!-- NAVBAR LINKS -->
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">User</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item"
+                           asp-area="Authority" asp-controller="users" asp-action="Create">Report</a>
+                        <a class="dropdown-item" href="https://localhost:44315/Authority/CyberCells">Report Status</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Authority</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item"
+                           asp-area="Authority" asp-controller="CyberCells" asp-action="Index">CyberCell</a>
+                        <a class="dropdown-item" href="https://localhost:44315/Authority/users">All Records</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" asp-area="" asp-page="SafetyTips">Safety Tips</a>
+                </li>
+            </ul>
+            <partial name="_LoginPartial" />
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+         style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/003.webp');">
+        <h1 class="mb-3 h2">PAUSE & THINK BEFORE YOU CONNECT</h1>
+
+        <h4>Be Online But Be Safe</h4>
+
+    </div>
+    <!-- Jumbotron -->
+
+    <ul id="myUL">
+
+        <li id="space">
+            <span class="caret" style="font-size: 25px">Cyber Safety Tips for Children</span>
+            <ul class="nested">
+                <li>Never share your personal details like house address, phone number, date of birth and place of birth etc. on any online platform such as Facebook,Instagram, Blogs, Twitter, Chat-rooms etc.</li>
+                <li> Make sure that indecent/offending/harassing emails/chatts posts are not be responded. Rather keep them in records in the form of screenshots and inform your parent/guardian to report it to the police. The account should be immediately blocked.</li>
+            </ul>
+        </li>
+        <li id="space">
+            <span class="caret" style="font-size: 25px">Cyber Safety Tips for Women</span>
+            <ul class="nested">
+                <li>Choose a safe online name. Pick a name that doesn’t reflect your complete identity or location.</li>
+
+                <li>Know the Privacy Policy and Terms of Service of any service you use. Create an environment of safety for yourself by understanding how a website that you use, treats your privacy and information. That fine print may tell you the company can own, resell, rent, or give your information to anyone they want. If it does that then find a more respectful site.</li>
+            </ul>
+        </li>
+        <li id="space">
+            <span class="caret" style="font-size: 25px">Cyber Safety Tips for Parents</span>
+            <ul class="nested">
+                <li>Do not replace physical parental supervision of computer use at home with any safe search engine or any other tool. No search filtering software or tool is perfect.</li>
+
+                <li>Educate yourself also on social media safety and have open discussions with teens about present dangers and long term effects of inappropriate conduct, including posting pictures/videos online.</li>
+            </ul>
+        </li>
+        <li id="space">
+            <span class="caret" style="font-size: 25px">Cyber Safety Tips for Senior-Citizens</span>
+            <ul class="nested">
+                <li>
+                    Make sure your computer has security software on it and also check that the auto-update feature is enabled to ensure that your computer has the latest security features.
+                </li>
+                <li>Passwords need to be unique and strong – these passwords need to be made up of upper and lower case letters as well as numbers. Never reveal your password to anyone. Passwords are an excellent guarantee of safety and security online.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <footer class="bg-dark text-center text-lg-start text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row mt-4">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Cyber Attack?</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>Data Theft</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>Account Hacking</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white"><i class="fas fa-user-edit fa-fw fa-sm me-2"></i>Breaching Info</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">To Do</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Immediate Report</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white"><i class="fas fa-backspace fa-fw fa-sm me-2"></i>Deactivate account</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>Change password</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>Be careful</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Head Branch</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>265346</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>123/A Divya Nagar</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>05765 NY</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white"><i class="fas fa-briefcase fa-fw fa-sm me-2"></i>Noida</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Write to us</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="text-white"><i class="fas fa-at fa-fw fa-sm me-2"></i>Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Blog Account</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white"><i class="fas fa-envelope fa-fw fa-sm me-2"></i>Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+        <!-- Api Documentation -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © For API Documentation:
+            <a class="text-white" href="/Swagger">Click Here</a>
+        </div>
+        <!--  Api Documentation  -->
+    </footer>
+
+    <script>
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+
+        for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function () {
+                this.parentElement.querySelector(".nested").classList.toggle("active");
+                this.classList.toggle("caret-down");
+            });
+        }
+    </script>
+
+</body>
+</html>
