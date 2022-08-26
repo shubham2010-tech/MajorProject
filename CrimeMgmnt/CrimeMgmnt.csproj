@@ -22,8 +22,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\Authority\ViewModels\" />
-    <Folder Include="Areas\User\Controllers\" />
-    <Folder Include="Areas\User\ViewModels\" />
     <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 

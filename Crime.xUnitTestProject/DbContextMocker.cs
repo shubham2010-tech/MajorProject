@@ -11,9 +11,10 @@ namespace Crime.xUnitTestProject
     //we need to make it singleton as static so that we dont use multiple instances of single class.
     public static class DbContextMocker
     {
-        // NOTE: 
-        //     Since all tests run parallelly,
-        //     ensure that each test method gets its own locally scoped InMemory database
+        /// <summary>
+        /// NOTE:  Since all tests run parallelly,
+        // ensure that each test method gets its own locally scoped InMemory database
+        /// </summary>
 
         public static ApplicationDbContext GetApplicationDbContext(string databasename)
         {
