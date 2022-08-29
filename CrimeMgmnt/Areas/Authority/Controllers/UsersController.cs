@@ -7,10 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CrimeMgmnt.Data;
 using CrimeMgmnt.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CrimeMgmnt.Areas.Authority.Controllers
 {
     [Area("Authority")]
+    [Authorize(Roles ="AppUser")]
     public class UsersController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -19,7 +21,7 @@ namespace CrimeMgmnt.Areas.Authority.Controllers
         {
             _context = context;
         }
-
+        [Authorize(Roles ="AppAdmin")]
         // GET: Authority/Users
         public async Task<IActionResult> Index()
         {
@@ -56,7 +58,7 @@ namespace CrimeMgmnt.Areas.Authority.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UserId,UserName,Age,CrimePlatform,CrimeDescription,DateTime,Place")] User user)
+        public async Task<IActionResult> Create([Bind("UserId,UserName,Age,CrimePlatform,CrimeDescription,DateTime,Place,mobile")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +90,7 @@ namespace CrimeMgmnt.Areas.Authority.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UserId,UserName,Age,CrimePlatform,CrimeDescription,DateTime,Place")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("UserId,UserName,Age,CrimePlatform,CrimeDescription,DateTime,Place,mobile")] User user)
         {
             if (id != user.UserId)
             {

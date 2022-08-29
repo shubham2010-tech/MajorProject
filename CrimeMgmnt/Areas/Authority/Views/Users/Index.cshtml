@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body style="margin-bottom: 0px; background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2BC6rrk6dehLe1lk1R3SS0aCVcOl7CDhvXA&usqp=CAU')">
     <nav class="navbar navbar-expand navbar-dark bg-success">
@@ -46,6 +47,23 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        $(document).ready(function () {
+            var dtToday = new Date();
+            var month = dtToday.getMonth() + 1;
+            var day = dtToday.getDate();
+            var year = dtToday.getFullYear();
+            if (month < 10)
+                month = '0' + month.toString();
+            if (day < 10)
+                day = ('0') + day.toString();
+            var maxDate = year + '-' + month + '-' + day;
+
+            $('#datecontrol').attr('min', maxDate);
+        })
+    </script>
+
 </body>
 </html>
 <table class="table">
@@ -56,6 +74,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mobile)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Age)
@@ -83,6 +104,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mobile)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Age)

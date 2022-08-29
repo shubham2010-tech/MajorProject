@@ -18,6 +18,10 @@ namespace CrimeMgmnt.Models
         [Display(Name = "Name")]
         public string UserName { get; set; }
 
+        [Required(ErrorMessage ="You must enter the registered number")]
+        [Display(Name = "Reg. Number")]
+        public string mobile { get; set; }
+
         [Required]
         public int Age { get; set; }
 

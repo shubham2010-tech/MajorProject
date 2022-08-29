@@ -22,6 +22,7 @@ namespace CrimeMgmnt.Areas.Authority.Controllers
             _context = context;
         }
 
+        [Authorize(Roles ="AppUser")]
         // GET: Authority/CyberCells
         public async Task<IActionResult> Index()
         {

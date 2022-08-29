@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrimeMgmnt", "CrimeMgmnt\CrimeMgmnt.csproj", "{BB7B6DB4-4FD5-46EA-AA94-E76FC1279998}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crime.xUnitTestProject", "Crime.xUnitTestProject\Crime.xUnitTestProject.csproj", "{9D4B40E6-1DF1-4C0A-95D0-07192B22DA95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crime.xUnitTestProject", "Crime.xUnitTestProject\Crime.xUnitTestProject.csproj", "{9D4B40E6-1DF1-4C0A-95D0-07192B22DA95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
